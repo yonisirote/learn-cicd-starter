@@ -6,18 +6,18 @@ on:
 
 jobs:
   deploy:
-  name: Deploy
-  rus-on: ubuntu-latest
+    name: Deploy
+    rus-on: ubuntu-latest
 
-  steps:
-    - name: Check out code
-      uses: actions/checkout@v4
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v4
 
-    - name: Set up Go
-      uses: actions/setup-go@v5
-      with:
+      - name: Set up Go
+        uses: actions/setup-go@v5
+        with:
           go-version: "1.26.0"
 
-    - name: Build app
-      run: ./scripts/buildprod.sh
+      - name: Build app
+        run: ./scripts/buildprod.sh
 
